@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", "Inter", system-ui, sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  /* Overriding standard slate colors dynamically to respect professional contrast scales */
+  --color-slate-50: var(--slate-50);
+  --color-slate-100: var(--slate-100);
+  --color-slate-200: var(--slate-200);
+  --color-slate-300: var(--slate-300);
+  --color-slate-400: var(--slate-400);
+  --color-slate-500: var(--slate-500);
+  --color-slate-600: var(--slate-600);
+  --color-slate-700: var(--slate-700);
+  --color-slate-750: var(--slate-750);
+  --color-slate-800: var(--slate-800);
+  --color-slate-850: var(--slate-850);
+  --color-slate-900: var(--slate-900);
+  --color-slate-950: var(--slate-950);
+
+  /* Overriding cyan primary accents dynamically */
+  --color-cyan-400: var(--primary-blue-light);
+  --color-cyan-500: var(--primary-blue);
+  --color-cyan-600: var(--primary-blue-dark);
+  --color-cyan-700: var(--primary-blue-darker);
+
+  /* Overriding success color (emerald) dynamically */
+  --color-emerald-400: var(--success-green-light);
+  --color-emerald-500: var(--success-green);
+  --color-emerald-600: var(--success-green-dark);
+
+  /* Overriding warning color (amber) dynamically */
+  --color-amber-400: var(--warning-yellow-light);
+  --color-amber-500: var(--warning-yellow);
+  --color-amber-600: var(--warning-yellow-dark);
+
+  /* Overriding rose color dynamically for dynamic alerts and secondary actions */
+  --color-rose-400: var(--alert-red-light);
+  --color-rose-500: var(--alert-red);
+  --color-rose-600: var(--alert-red-dark);
+}
+
+:root {
+  /* 🌞 Light Mode (الوضع الفاتح) - "الوضوح والانطلاق" */
+  --primary-blue-light: #60A5FA;
+  --primary-blue: #2563EB; /* الأزرق الملكي للعناصر الأساسية */
+  --primary-blue-dark: #1D4ED8;
+  --primary-blue-darker: #1E40AF;
+
+  --bg-soft: #F8FAFC; /* خلفية بيضاء/رمادية فاتحة */
+  --bg-card: #FFFFFF; /* خلفية البطاقات بيضاء */
+  --bg-elevated: #F1F5F9;
+  --text-bold: #1E293B;
+  --text-muted: #64748B;
+  --border-light: #E2E8F0;
+
+  --success-green-light: #E0F2FE; /* الأزرق السماوي الفاتح كبديل للأخضر الفاتح */
+  --success-green: #0284C7; /* الأزرق السماوي المشرق والواضح كبديل للأخضر */
+  --success-green-dark: #0369A1; /* الأزرق السماوي الداكن كبديل للأخضر الداكن */
+
+  --warning-yellow-light: #DBEAFE; /* أزرق سماوي ناعم كبديل للأصفر الفاتح */
+  --warning-yellow: #1E3A8A; /* أزرق داكن ملكي كبديل للأصفر/البرتقالي */
+  --warning-yellow-dark: #172554; /* أزرق داكن جداً */
+
+  --alert-red-light: #FCA5A5; /* الأحمر للتنبيهات والتحذيرات والإجراءات الثانوية */
+  --alert-red: #EF4444;
+  --alert-red-dark: #DC2626;
+
+  /* Standard Slate palette for Light Mode */
+  --slate-50: #F8FAFC;
+  --slate-100: #F1F5F9;
+  --slate-200: #E2E8F0;
+  --slate-300: #CBD5E1;
+  --slate-400: #94A3B8;
+  --slate-500: #64748B;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-750: #1E293B;
+  --slate-800: #1E293B;
+  --slate-850: #0F172A;
+  --slate-900: #0F172A;
+  --slate-950: #020617;
+}
+
+.dark {
+  /* 🌙 الوضع الداكن (Dark Mode) - "الفخامة والأناقة الملكية بالذهبي والأزرق الغامق" */
+  --primary-blue-light: #FDE047;
+  --primary-blue: #D4AF37; /* ذهبي ملكي للأزرار والعناوين البارزة */
+  --primary-blue-dark: #B5942B; /* حالة Hover الذهبي الملكي */
+  --primary-blue-darker: #9A7B1C;
+
+  --bg-soft: #050914; /* الأزرق الغامق كخلفية أساسية فخمة وملكية تبرز المحتوى */
+  --bg-card: #0B132B; /* خلفية البطاقات والـ container بأزرق غامق ناعم وجذاب */
+  --bg-elevated: #131E3D;
+  --text-bold: #F1F5F9;
+  --text-muted: #94A3B8;
+  --border-light: #131E3D;
+
+  --success-green-light: #FEF08A; /* الذهبي/الأصفر الفاتح كبديل للأخضر الفاتح */
+  --success-green: #D4AF37; /* الذهبي الملكي كبديل للأخضر */
+  --success-green-dark: #B5942B; /* الذهبي الداكن كبديل للأخضر الداكن */
+
+  --warning-yellow-light: #FFF1A8; /* ذهبي فاتح ناصع */
+  --warning-yellow: #D4AF37; /* ذهبي ملكي فخم */
+  --warning-yellow-dark: #B5942B; /* ذهبي داكن */
+
+  --alert-red-light: #FDA4AF;
+  --alert-red: #F43F5E;
+  --alert-red-dark: #E11D48;
+
+  /* Premium Royal Deep Navy/Blue palette for Dark Mode (preserving light text values) */
+  --slate-50: #F8FAFC;
+  --slate-100: #F1F5F9;
+  --slate-200: #E2E8F0;
+  --slate-300: #CBD5E1;
+  --slate-400: #94A3B8;
+  --slate-500: #64748B;
+  --slate-600: #3B4B7C;
+  --slate-700: #1E2D5F;
+  --slate-750: #131E3D;
+  --slate-800: #131E3D;
+  --slate-850: #0B132B;
+  --slate-900: #0B132B;
+  --slate-950: #050914;
+}
+
+body {
+  font-family: var(--font-sans);
+  direction: rtl; /* RTL Support for Arabic educational platform */
+  background-color: var(--bg-soft);
+  color: var(--text-bold);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* Custom continuous marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   DASHBOARD OVERRIDES AND STYLING FOR MAXIMUM COHESION
+   ========================================================================== */
+
+.light-dashboard {
+  background-color: var(--bg-soft) !important;
+  color: var(--text-bold) !important;
+}
+
+/* Main layouts, headers and sidebars */
+.light-dashboard header,
+.light-dashboard aside,
+.light-dashboard .bg-slate-900,
+.light-dashboard .bg-slate-900\/80,
+.light-dashboard .bg-slate-900\/50 {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-light) !important;
+  color: var(--text-bold) !important;
+}
+
+/* Card and item backgrounds */
+.light-dashboard .bg-slate-950,
+.light-dashboard .bg-slate-950\/80,
+.light-dashboard .bg-slate-950\/60,
+.light-dashboard .bg-slate-950\/40 {
+  background-color: var(--bg-elevated) !important;
+  border-color: var(--border-light) !important;
+  color: var(--text-bold) !important;
+}
+
+/* Inner containers and list items */
+.light-dashboard .border-slate-800,
+.light-dashboard .border-slate-850,
+.light-dashboard .border-slate-900 {
+  border-color: var(--border-light) !important;
+}
+
+/* Text Adaptations */
+.light-dashboard .text-slate-100,
+.light-dashboard h1,
+.light-dashboard h2,
+.light-dashboard h3,
+.light-dashboard h4 {
+  color: var(--text-bold) !important;
+}
+
+.light-dashboard .text-slate-200,
+.light-dashboard .text-slate-300,
+.light-dashboard .text-slate-400 {
+  color: var(--text-muted) !important;
+}
+
+.light-dashboard .text-slate-500 {
+  color: var(--text-muted-lighter) !important;
+}
+
+/* Select, Inputs, Buttons and Textareas */
+.light-dashboard select,
+.light-dashboard input,
+.light-dashboard textarea {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-light) !important;
+  color: var(--text-bold) !important;
+}
+
+.light-dashboard select option {
+  background-color: var(--bg-card) !important;
+  color: var(--text-bold) !important;
+}
+
+/* Tables Styling */
+.light-dashboard table {
+  background-color: var(--bg-card) !important;
+}
+
+.light-dashboard table th {
+  background-color: var(--bg-elevated) !important;
+  color: var(--text-bold) !important;
+  border-bottom: 2px solid var(--border-light) !important;
+}
+
+.light-dashboard table td {
+  color: var(--text-muted) !important;
+  border-bottom: 1px solid var(--bg-elevated) !important;
+}
+
+.light-dashboard table tr:hover {
+  background-color: var(--bg-soft) !important;
+}
+
+/* Gradients text color safety */
+.text-transparent.bg-clip-text {
+  background-image: linear-gradient(to right, var(--primary-blue), var(--success-green)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Status indicators and badges */
+.bg-cyan-500\/10 {
+  background-color: color-mix(in srgb, var(--primary-blue) 10%, transparent) !important;
+  color: var(--primary-blue) !important;
+}
+
+.bg-emerald-500\/10 {
+  background-color: color-mix(in srgb, var(--success-green) 10%, transparent) !important;
+  color: var(--success-green) !important;
+}
+
+.bg-rose-500\/10 {
+  background-color: color-mix(in srgb, var(--alert-red) 10%, transparent) !important;
+  color: var(--alert-red) !important;
+}
+
+.bg-amber-500\/10 {
+  background-color: color-mix(in srgb, var(--warning-yellow) 10%, transparent) !important;
+  color: var(--warning-yellow) !important;
+}
+
+

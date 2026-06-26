@@ -1,0 +1,6 @@
+{
+  "name": "A CLASS Educational Platform",
+  "description": "منصة تعليمية احترافية ومتكاملة للطلاب والمدرسين والإدارة، تدعم وضعين داكن وفاتح بتصاميم مميزة وتفاعلية بالكامل مع دعم حماية المحتوى والامتحانات ومحاكاة قاعدة البيانات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
