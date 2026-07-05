@@ -34,6 +34,8 @@ import { EducationalStage, Grade, Subject, Teacher, Student } from '../types';
 import logoDark from "../../assets/logo-dark.png";
 import logoLight from "../../assets/logo-light.png";
 
+const isDarkMode = document.documentElement.classList.contains("dark");
+
 // Simple Lucide wrapper because dynamic icons can fail
 export function SmartIcon({ name, className = "w-6 h-6" }: { name: string; className?: string }) {
   switch (name) {
