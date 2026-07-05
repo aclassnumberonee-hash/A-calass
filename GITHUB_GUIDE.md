@@ -1,27 +1,6 @@
-# دليل رفع منصة A-CLASS التعليمية على GitHub وتكوين Supabase 🚀
-# A-CLASS Educational Platform GitHub & Supabase Guide
-
-هذا الدليل يوضح لك خطوة بخطوة كيفية رفع كود المنصة بالكامل إلى حسابك على **GitHub** وتوصيلها بقاعدة بيانات **Supabase** السحابية.
-
----
-
-## الجزء الأول: رفع المشروع على GitHub 💻
-
-لرفع هذا المشروع الرائع على جيت هاب، اتبع الخطوات التالية بدقة:
-
-### 1. تثبيت Git وتجهيز المستودع
-إذا لم تكن قد قمت بتهيئة مستودع Git محلياً بعد، افتح terminal في مجلد المشروع ونفذ الأوامر التالية:
-
-```bash
-# تهيئة مستودع Git محلي
-git init
-
-# إضافة جميع الملفات إلى التتبع
-git add .
 
 # تسجيل أول Commit للتغييرات
 git commit -m "feat: integrate Supabase client and export schema"
-```
 
 ### 2. إنشاء مستودع جديد على GitHub
 1. اذهب إلى موقع [GitHub](https://github.com) وسجل دخولك.

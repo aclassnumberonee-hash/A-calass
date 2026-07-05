@@ -31,6 +31,8 @@ import {
 } from 'lucide-react';
 import { GOVERNORATES } from '../mockData';
 import { EducationalStage, Grade, Subject, Teacher, Student } from '../types';
+import logoDark from "../../assets/logo-dark.png";
+import logoLight from "../../assets/logo-light.png";
 
 // Simple Lucide wrapper because dynamic icons can fail
 export function SmartIcon({ name, className = "w-6 h-6" }: { name: string; className?: string }) {
@@ -71,12 +73,14 @@ export function PageStart({ onFinished }: { onFinished: () => void }) {
         <div className="absolute w-40 h-40 rounded-full border-4 border-b-cyan-400 border-t-transparent border-l-transparent border-r-transparent animate-spin" style={{ animationDirection: 'reverse', animationDuration: '3s' }}></div>
         {/* Core Logo */}
         <div className="w-28 h-28 rounded-full bg-slate-900 border-2 border-slate-800 flex flex-col items-center justify-center p-3 z-10 shadow-2xl shadow-cyan-500/25">
-          <GraduationCap className="w-10 h-10 text-cyan-400 mb-1" />
-          <span className="font-extrabold text-2xl tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-amber-400 to-emerald-400">A CLASS</span>
-        </div>
+<img
+  src={isDarkMode ? logoDark : logoLight}
+  alt="A CLASS Logo"
+  className="w-full h-full object-cover rounded-full"
+/>
+   </div>
       </div>
-      <h3 className="text-xl font-bold text-slate-100 tracking-wide mb-3 animate-pulse">جاري تحميل منصتكم المفضلة...</h3>
-      <p className="text-xs text-slate-400 mb-6">تهيئة بيئة تفاعلية فائقة السرعة</p>
+      <h3 className="text-xl font-bold text-slate-100 tracking-wide mb-3 animate-pulse">جاري تحميل ...</h3>
       
       {/* Progress Bar Container */}
       <div className="w-64 h-2 bg-slate-800 rounded-full overflow-hidden border border-slate-700/50 shadow-inner">
