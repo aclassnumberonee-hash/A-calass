@@ -31,10 +31,7 @@ import {
 } from 'lucide-react';
 import { GOVERNORATES } from '../mockData';
 import { EducationalStage, Grade, Subject, Teacher, Student } from '../types';
-import logoDark from "../../assets/logo-dark.png";
-import logoLight from "../../assets/logo-light.png";
-
-const isDarkMode = document.documentElement.classList.contains("dark");
+import logo from "../../assets/logo-dark.png";
 
 // Simple Lucide wrapper because dynamic icons can fail
 export function SmartIcon({ name, className = "w-6 h-6" }: { name: string; className?: string }) {
@@ -76,7 +73,7 @@ export function PageStart({ onFinished }: { onFinished: () => void }) {
         {/* Core Logo */}
         <div className="w-28 h-28 rounded-full bg-slate-900 border-2 border-slate-800 flex flex-col items-center justify-center p-3 z-10 shadow-2xl shadow-cyan-500/25">
 <img
-  src={isDarkMode ? logoDark : logoLight}
+  src={logo}
   alt="A CLASS Logo"
   className="w-full h-full object-cover rounded-full"
 />
